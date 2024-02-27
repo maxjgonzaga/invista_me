@@ -81,10 +81,10 @@ WSGI_APPLICATION = 'projeto_investa_me.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'postgres', 
-        'USER': 'postgres', 
-        'PASSWORD': 'spBIvdRAugtsnYLx',
-        'HOST': 'db.dxyhscifnxsroshhwglx.supabase.co', 
+        'NAME': 'postgres',
+        'USER': 'postgres.gqejwehoolflviutieca',
+        'PASSWORD': 'YFn,c~Ux6xp_skk',
+        'HOST': 'aws-0-us-west-1.pooler.supabase.com',
         'PORT': '5432'
     }
 }
