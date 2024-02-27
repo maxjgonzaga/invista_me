@@ -2,7 +2,7 @@
 {% block conteudo %}
 {% load crispy_forms_tags %}
 <div class="container">
-    <h1>Formulario Novo Investimento</h1>
+    <h1>Formulário Novo Investimento</h1>
     <form action="" method="POST">
         {% csrf_token %}
         {{formulario | crispy}}

@@ -14,7 +14,7 @@ def novo_usuario(request):
                 request, f'O usuário {usuario} foi criado com sucesso!')
             return redirect('login')
 
-        else:
-            formulario = UserRegisterForm()
+    else:
+        formulario = UserRegisterForm()
 
-        return render(request, 'usuarios/registrar.html', {'formulario': formulario})
+    return render(request, 'usuarios/registrar.html', {'formulario': formulario})

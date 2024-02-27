@@ -1,8 +1,7 @@
-"""
-URL configuration for projeto_invista_me project.
+"""projeto_investa_me URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
-    https://docs.djangoproject.com/en/5.0/topics/http/urls/
+    https://docs.djangoproject.com/en/3.1/topics/http/urls/
 Examples:
 Function views
     1. Add an import:  from my_app import views
@@ -23,8 +22,8 @@ from django.contrib.auth import views as auth_views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('conta/', usuario_views.novo_usuario, name='novo_usuario'),
-    path('login/',auth_views.LoginView.as_view(template_name='usuarios/login.html'),name='login'),
-    path('logout/',auth_views.LogoutView.as_view(template_name='usuarios/logout.html'), name='logout'),
+    path('login/', auth_views.LoginView.as_view(template_name='usuarios/login.html'), name='login'),
+    path('logout/', auth_views.LogoutView.as_view(template_name='usuarios/logout.html'), name='logout'),
     path('', views.investimentos, name='investimentos'),
     path('novo_investimento/',
          views.criar, name='novo_investimento'),

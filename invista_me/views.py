@@ -24,7 +24,7 @@ def criar(request):
         investimento_form = InvestimentoForm(request.POST)
         if investimento_form.is_valid():
             investimento_form.save()
-            return redirect('investimentos')
+        return redirect('investimentos')
     else:
         investimento_form = InvestimentoForm()
         formulario = {
@@ -36,16 +36,14 @@ def criar(request):
 @login_required
 def editar(request, id_investimento):
     investimento = Investimento.objects.get(pk=id_investimento)
-    # novo_investimento/1 - > GET
     if request.method == 'GET':
         formulario = InvestimentoForm(instance=investimento)
         return render(request, 'investimentos/novo_investimento.html', {'formulario': formulario})
-    # caso requisição seja POST
-    else:
+    if request.method == 'POST':
         formulario = InvestimentoForm(request.POST, instance=investimento)
         if formulario.is_valid():
             formulario.save()
-            return redirect('investimentos')
+        return redirect('investimentos')
 
 
 @login_required
